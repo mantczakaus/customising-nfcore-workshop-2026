@@ -5,11 +5,12 @@ repo_name: Sydney-Informatics-Hub/template-mkdocs
 nav:
   # Landing page
   - Home: index.md 
-  # Example top-level page
-  #- Setup: setup.md
-  # Example nested page
-  # - Part 1:
-  #   - Introduction: part1/intro.md
+  - Setup: setup.md
+  - Lesson plan: lesson_plan.md
+  - Sesson 1:
+    - Introduction: session_1/1.0_intro.md
+  - Session 2:
+    - Introduction: session_2/2.0_intro.md
 
 theme:
   name: material
@@ -43,6 +44,9 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra:
   analytics:
