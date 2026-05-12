@@ -220,12 +220,12 @@ Now that we have identified the source of the warning, we should correct it to e
     ??? success "Solution"
         ```bash hl_lines="3 11 12"
         nextflow run rnaseq/main.nf \
-            --input ~/data/samplesheet.csv \
+            --input /home/<USERNAME>/data/samplesheet.csv \
             --outdir lesson-2.1.4 \
-            --fasta ~/data/mm10_reference/mm10_chr18.fa \
-            --gtf ~/data/mm10_reference/mm10_chr18.gtf \
-            --star_index ~/data/mm10_reference/STAR \
-            --salmon_index ~/data/mm10_reference/salmon-index \
+            --fasta /home/<USERNAME>/data/mm10_reference/mm10_chr18.fa \
+            --gtf /home/<USERNAME>/data/mm10_reference/mm10_chr18.gtf \
+            --star_index /home/<USERNAME>/data/mm10_reference/STAR \
+            --salmon_index /home/<USERNAME>/data/mm10_reference/salmon-index \
             -profile singularity \
             --skip_markduplicates true \
             -c nectar_vm.config \
@@ -344,7 +344,7 @@ No special formatting is required, although you can choose to split the long run
         ```bash
         #!/bin/bash
 
-        nextflow run rnaseq/main.nf --input ~/data/samplesheet.csv --outdir lesson-2.1.5 --fasta /home/<USENAME>>/data/mm10_reference/mm10_chr18.fa --gtf ~/data/mm10_reference/mm10_chr18.gtf --star_index ~/data/mm10_reference/STAR --salmon_index ~/data/mm10_reference/salmon-index  -profile singularity --skip_markduplicates true -c nectar_vm.config -resume --save_trimmed true --save_unaligned true
+        nextflow run rnaseq/main.nf --input /home/<USERNAME>/data/samplesheet.csv --outdir lesson-2.1.5 --fasta /home/<USENAME>>/data/mm10_reference/mm10_chr18.fa --gtf /home/<USERNAME>/data/mm10_reference/mm10_chr18.gtf --star_index /home/<USERNAME>/data/mm10_reference/STAR --salmon_index /home/<USERNAME>/data/mm10_reference/salmon-index  -profile singularity --skip_markduplicates true -c nectar_vm.config -resume --save_trimmed true --save_unaligned true
         ```
 
         Example script with variables for **portability** and line continuation characters for **readability**:
@@ -352,12 +352,12 @@ No special formatting is required, although you can choose to split the long run
         ```bash
         #!/bin/bash
 
-        samplesheet=~/data/samplesheet.csv
+        samplesheet=/home/<USERNAME>/data/samplesheet.csv
         output_directory=lesson-2.1.5
-        ref_fasta=~/data/mm10_reference/mm10_chr18.fa
-        ref_gtf=~/data/mm10_reference/mm10_chr18.gtf
-        star_index=~/data/mm10_reference/STAR
-        salmon_index=~/data/mm10_reference/salmon-index
+        ref_fasta=/home/<USERNAME>/data/mm10_reference/mm10_chr18.fa
+        ref_gtf=/home/<USERNAME>/data/mm10_reference/mm10_chr18.gtf
+        star_index=/home/<USERNAME>/data/mm10_reference/STAR
+        salmon_index=/home/<USERNAME>/data/mm10_reference/salmon-index
         institutional_config=nectar_vm.config
 
         nextflow run rnaseq/main.nf \
@@ -443,12 +443,12 @@ Example json-formatted parameters file:
         *Tip: Aligning the values is optional but can aid readability* 
 
         ```yaml title="rnaseq_params.yaml"
-        input                  : ~/data/samplesheet.csv
+        input                  : /home/<USERNAME>/data/samplesheet.csv
         outdir                 : lesson-2.1.5
-        fasta                  : ~/data/mm10_reference/mm10_chr18.fa
-        gtf                    : ~/data/mm10_reference/mm10_chr18.gtf
-        star_index             : ~/data/mm10_reference/STAR
-        salmon_index           : ~/data/mm10_reference/salmon-index
+        fasta                  : /home/<USERNAME>/data/mm10_reference/mm10_chr18.fa
+        gtf                    : /home/<USERNAME>/data/mm10_reference/mm10_chr18.gtf
+        star_index             : /home/<USERNAME>/data/mm10_reference/STAR
+        salmon_index           : /home/<USERNAME>/data/mm10_reference/salmon-index
         skip_markduplicates    : true
         save_trimmed           : true
         save_unaligned         : true 
@@ -517,7 +517,7 @@ To ensure that there is no ambiguity about what non-custom parameters were appli
     - Double click your most recent `params_<date>_time>.json` file to view it in the editor pane 
     - Scroll down to review the parameters - there are over 100! 
     
-    You should be able to spot your custom parameters, including those required (eg `"input": "~/data/samplesheet.csv"`) and those optional (eg `skip_markduplicates": true`). 
+    You should be able to spot your custom parameters, including those required (eg `"input": "/home/<USERNAME>/data/samplesheet.csv"`) and those optional (eg `skip_markduplicates": true`). 
     
     Many are set to 'null' or 'false'. The others have been applied to your analysis by default. 
 

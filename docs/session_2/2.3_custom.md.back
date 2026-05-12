@@ -67,12 +67,12 @@ Bowtie2 uses Salmon quantification like the default STAR-Salmon pipeline we have
         #!/bin/bash
 
         # parameters
-        samplesheet=~/data/samplesheet.csv
+        samplesheet=/home/<USERNAME>/data/samplesheet.csv
         output_directory=lesson-2.3
-        ref_fasta=~/data/mm10_reference/mm10_chr18.fa
-        ref_gtf=~/data/mm10_reference/mm10_chr18.gtf
-        star_index=~/data/mm10_reference/STAR
-        salmon_index=~/data/mm10_reference/salmon-index
+        ref_fasta=/home/<USERNAME>/data/mm10_reference/mm10_chr18.fa
+        ref_gtf=/home/<USERNAME>/data/mm10_reference/mm10_chr18.gtf
+        star_index=/home/<USERNAME>/data/mm10_reference/STAR
+        salmon_index=/home/<USERNAME>/data/mm10_reference/salmon-index
 
         # configurations
         profile=workshop
@@ -130,7 +130,7 @@ In this case, we don't need to hunt for the directory as it has been helpfully p
 
 ```console title="Example"
 Work dir:
-  ~/session2/work/dc/5184fdc7c63198d41a03c73790b7f6
+  /home/<USERNAME>/session2/work/dc/5184fdc7c63198d41a03c73790b7f6
 ```
 
 !!! example "Exercise 2.3.3.1 :stopwatch: 2 mins"
@@ -435,12 +435,12 @@ Our next run will include two custom configs. This is valid, and we can add as m
         #!/bin/bash
 
         # parameters
-        samplesheet=~/data/samplesheet.csv
+        samplesheet=/home/<USERNAME>/data/samplesheet.csv
         output_directory=lesson-2.3.4
-        ref_fasta=~/data/mm10_reference/mm10_chr18.fa
-        ref_gtf=~/data/mm10_reference/mm10_chr18.gtf
-        star_index=~/data/mm10_reference/STAR
-        salmon_index=~/data/mm10_reference/salmon-index
+        ref_fasta=/home/<USERNAME>/data/mm10_reference/mm10_chr18.fa
+        ref_gtf=/home/<USERNAME>/data/mm10_reference/mm10_chr18.gtf
+        star_index=/home/<USERNAME>/data/mm10_reference/STAR
+        salmon_index=/home/<USERNAME>/data/mm10_reference/salmon-index
 
         # configurations
         profile=workshop
@@ -643,12 +643,12 @@ Each config is a discrete set of customisations matching a specific purpose - th
         #!/bin/bash
 
         # parameters
-        samplesheet=~/data/samplesheet.csv
+        samplesheet=/home/<USERNAME>/data/samplesheet.csv
         output_directory=lesson-2.3.5
-        ref_fasta=~/data/mm10_reference/mm10_chr18.fa
-        ref_gtf=~/data/mm10_reference/mm10_chr18.gtf
-        star_index=~/data/mm10_reference/STAR
-        salmon_index=~/data/mm10_reference/salmon-index
+        ref_fasta=/home/<USERNAME>/data/mm10_reference/mm10_chr18.fa
+        ref_gtf=/home/<USERNAME>/data/mm10_reference/mm10_chr18.gtf
+        star_index=/home/<USERNAME>/data/mm10_reference/STAR
+        salmon_index=/home/<USERNAME>/data/mm10_reference/salmon-index
 
         # configurations
         profile=workshop
@@ -752,12 +752,12 @@ This configuration is a yaml-formatted file matching the input format expected b
         #!/bin/bash
 
         # parameters
-        samplesheet=~/data/samplesheet.csv
+        samplesheet=/home/<USERNAME>/data/samplesheet.csv
         output_directory=lesson-2.3.6
-        ref_fasta=~/data/mm10_reference/mm10_chr18.fa
-        ref_gtf=~/data/mm10_reference/mm10_chr18.gtf
-        star_index=~/data/mm10_reference/STAR
-        salmon_index=~/data/mm10_reference/salmon-index
+        ref_fasta=/home/<USERNAME>/data/mm10_reference/mm10_chr18.fa
+        ref_gtf=/home/<USERNAME>/data/mm10_reference/mm10_chr18.gtf
+        star_index=/home/<USERNAME>/data/mm10_reference/STAR
+        salmon_index=/home/<USERNAME>/data/mm10_reference/salmon-index
 
         # custom multiqc
         multiqc=custom-multiqc.yaml
