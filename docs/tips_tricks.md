@@ -94,3 +94,9 @@ You can also use the launch command directly from the [nf-core launch website](h
 nf-core launch --id <run_id>
 ```
 
+## Other workshops
+
+This workshop is part of a series of Nextflow workshops we have developed at SIH. For more information on running Nextflow pipelines, see the other workshops in the series:
+
+- [Nextflow for Life Sciences](https://sydney-informatics-hub.github.io/hello-nextflow-2025/): An introduction to writing your own Nextflow pipelines within the context of the life sciences and bioinformatics.
+- [Nextflow for HPC workshop](https://sydney-informatics-hub.github.io/nextflow-hpc-workshop/): A deeper dive into customising and optimising Nextflow pipelines specifically for running on HPC systems.
